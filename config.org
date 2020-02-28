@@ -1,8 +1,10 @@
 This configuration is mainly based in these series of youtube tutorials:
-[[https://www.youtube.com/watch?v%3D49kBWM3RQQ8&list%3DPL9KxKa8NpFxIcNQa9js7dQQIHc81b0-Xg&index%3D1][
-Mike Zamansky]
-[[https://www.youtube.com/watch?v%3Dd6iY_1aMzeg&list%3DPLX2044Ew-UVVv31a0-Qn3dA6Sd_-NyA1n]
-Uncle Dave]]
+
+[[https://www.youtube.com/watch?v%3D49kBWM3RQQ8&list%3DPL9KxKa8NpFxIcNQa9js7dQQIHc81b0-Xg][Mike Zamansky's tutorials]]
+
+[[https://www.youtube.com/watch?v%3Dd6iY_1aMzeg&list%3DPLX2044Ew-UVVv31a0-Qn3dA6Sd_-NyA1n][Uncle Dave's tutorials]]
+
+
 as well as [[https://tuhdo.github.io/c-ide.html][this one.]]
 * Basic interface settings
 ** Disable startup message
