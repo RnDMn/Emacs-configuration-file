@@ -1,4 +1,4 @@
-This configuration is mainly based in these series of tutorials:
+This configuration is mainly based in these tutorials:
 [[https://cestlaz.github.io/stories/emacs/][Mike Zamansky]],
 [[https://github.com/daedreth/UncleDavesEmacs][Uncle Dave]],
 as well as [[https://tuhdo.github.io/c-ide.html][this one.]]
