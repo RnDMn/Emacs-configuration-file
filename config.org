@@ -1,4 +1,7 @@
-
+This configuration is based mainly in these youtube tutorials:
+[[https://www.youtube.com/watch?v%3D49kBWM3RQQ8&list%3DPL9KxKa8NpFxIcNQa9js7dQQIHc81b0-Xg][Mike Zamansky]]
+[[https://www.youtube.com/watch?v%3Dd6iY_1aMzeg&list%3DPLX2044Ew-UVVv31a0-Qn3dA6Sd_-NyA1n][Uncle Dave]]
+as well as [[https://tuhdo.github.io/c-ide.html][this one.]]
 * Basic interface settings
 ** Disable startup message
 #+BEGIN_SRC emacs-lisp
@@ -13,7 +16,7 @@
 (when window-system (add-hook 'prog-mode-hook 'hl-line-mode))
 #+END_SRC
 ** Pretty symbols
-Changes lambda to its symbol, and a few others too
+Changes lambda to its symbol, and a few others too.
 #+BEGIN_SRC emacs-lisp
 (when window-system
       (use-package pretty-mode
@@ -22,7 +25,7 @@ Changes lambda to its symbol, and a few others too
       (global-pretty-mode t)))
 #+END_SRC
 ** Disable menus and scrollbars
-Can be set to 1 to use them
+Can be set to 1 to use them.
 #+BEGIN_SRC emacs-lisp
 ;;(menu-bar-mode -1)
 (scroll-bar-mode -1)
@@ -32,14 +35,8 @@ Can be set to 1 to use them
 #+BEGIN_SRC emacs-lisp
   (setq default-directory "/home/rndmn/emacs/")
 #+END_SRC
-** row and column numbers
-(This doesn't work probably because something elese I have)
-#+BEGIN_SRC emacs-lisp
- ;; (line-number-mode 1)
- ;; (column-number-mode 1)
-#+END_SRC
 * Theme customization
-trying setting the font size
+Setting the font size.
 #+BEGIN_SRC emacs-lisp
 (add-to-list 'default-frame-alist
              '(font . "DejaVu Sans Mono-10"))
@@ -66,7 +63,6 @@ trying setting the font size
 #+BEGIN_SRC emacs-lisp
 (global-set-key (kbd "<s-return>") 'ansi-term)
 #+END_SRC
-
 ** Paste into terminal
 #+BEGIN_SRC emacs-lisp
 (eval-after-load "term"
@@ -315,7 +311,7 @@ using C-M-s-k
 #+END_SRC
 * Small tweaks
 ** fast load configuration file
-With Ctrl+c e.
+Load config.org with C-c e.
 #+BEGIN_SRC emacs-lisp
 (defun config-visit ()
   (interactive)
@@ -323,6 +319,7 @@ With Ctrl+c e.
 (global-set-key (kbd "C-c e") 'config-visit)
 #+END_SRC
 ** reload configuration file
+Fast reload config file with C-c r.
 #+BEGIN_SRC emacs-lisp
 (defun config-reload ()
   "Reloads ~/.emacs.d/config.org at runtime"
@@ -330,7 +327,8 @@ With Ctrl+c e.
   (org-babel-load-file (expand-file-name "~/.emacs.d/config.org")))
 (global-set-key (kbd "C-c r") 'config-reload)
 #+END_SRC
-** electric pairs (like parenthesis and so on...)
+** electric pairs
+Write some specific characters in pairs.
 #+BEGIN_SRC emacs-lisp
   (setq electric-pair-pairs '(
                               (?\( . ?\))
@@ -406,7 +404,7 @@ For fast cursor location.
   (add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options))
 #+END_SRC
 ** company c-headers and c++ headers
-Autocomplete c/c++ headers and some users directory headers
+Autocomplete c/c++ headers and some custom directory headers
 #+BEGIN_SRC emacs-lisp
   (use-package company-c-headers
     :ensure t
@@ -429,7 +427,7 @@ Autocomplete c/c++ headers and some users directory headers
   (yas-global-mode 1))
 #+END_SRC 
 ** flycheck
-To catch errors on the fly.
+Catch syntax errors.
 #+BEGIN_SRC emacs-lisp
 (use-package flycheck
   :ensure t
@@ -437,6 +435,7 @@ To catch errors on the fly.
   (global-flycheck-mode t))
 #+END_SRC
 ** semantic mode
+I believe should be used instead of company-irony. Will try it probably some day.
 #+BEGIN_SRC emacs-lisp
  ;; (semantic-mode 1)
  ;; (defun my:add-semantic-to-company()
