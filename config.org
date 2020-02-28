@@ -406,6 +406,7 @@ For fast cursor location.
   (add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options))
 #+END_SRC
 ** company c-headers and c++ headers
+Autocomplete c/c++ headers and some users directory headers
 #+BEGIN_SRC emacs-lisp
   (use-package company-c-headers
     :ensure t
