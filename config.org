@@ -39,7 +39,7 @@ Can be set to 1 to use them
  ;; (column-number-mode 1)
 #+END_SRC
 * Theme customization
-trying settingthe font size
+trying setting the font size
 #+BEGIN_SRC emacs-lisp
 (add-to-list 'default-frame-alist
              '(font . "DejaVu Sans Mono-10"))
